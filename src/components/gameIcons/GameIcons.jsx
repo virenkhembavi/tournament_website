@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 function GameIcons() {
     return (
         <section className="bg-[#1a1e3c] text-white pb-6 md:pb-10">
-            <div className=" mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-center gap-1 md:gap-2 overflow-x-auto py-4 no-scrollbar">
                     {games.map((game, index) => (
                         <div
