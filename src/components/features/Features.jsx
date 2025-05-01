@@ -45,7 +45,7 @@ const features = [
     },
     {
         title: "Professional Circuit",
-        icon: "https://www.toornament.com/media/8559703539012976640/original",
+        icon: "https://www.toornament.com/media/8559705529025110016/original",
         description: "Unlock all features for your competition project and manage circuits",
     },
     {
