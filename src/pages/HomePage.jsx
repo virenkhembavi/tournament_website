@@ -47,7 +47,7 @@ function HomePage() {
         <Box p={2}>
             <Grid container spacing={2} mb={3}>
                 <Grid item xs={12} sm={6}>
-                    <FormControl fullWidth size="medium">
+                    <FormControl>
                         <InputLabel>Category</InputLabel>
                         <Select value={category} label="Category" onChange={(e) => setCategory(e.target.value)}>
                             <MenuItem value="">All</MenuItem>
@@ -58,7 +58,7 @@ function HomePage() {
                     </FormControl>
                 </Grid>
                 <Grid item xs={12} sm={9}>
-                    <Typography variant="body2" gutterBottom>
+                    <Typography>
                         Price: ${price[0]} - ${price[1]}
                     </Typography>
                     <Slider
@@ -84,11 +84,11 @@ function HomePage() {
                                         style={{ objectFit: "contain" }}
                                     />
                                 </Box>
-                                <Typography variant="subtitle1" width={400}>
+                                <Typography width={400}>
                                     {item?.title}
                                 </Typography>
-                                <Typography variant="body2">Price: ${item?.price}</Typography>
-                                <Typography variant="caption">Category: {item?.category}</Typography>
+                                <Typography >Price: ${item?.price}</Typography>
+                                <Typography >Category: {item?.category}</Typography>
                             </CardContent>
                         </Card>
                     </Grid>
