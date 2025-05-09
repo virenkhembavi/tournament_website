@@ -33,12 +33,12 @@ function HomePage() {
     }, []);
 
     useEffect(() => {
-        const filteredData = data.filter(
+        const filteredData = data?.filter(
             (item) =>
                 (category === "" || item?.category === category) &&
-                item.price >= price[0] &&
-                item.price <= price[1]
-        );
+                item?.price >= price[0] &&
+                item?.price <= price[1]
+        )?.sort((a, b) => a?.title?.localeCompare(b?.title));;
         setFiltered(filteredData);
     }, [category, price, data]);
 
@@ -72,7 +72,7 @@ function HomePage() {
             </Grid>
             <Grid container spacing={2}>
                 {filtered?.map((item) => (
-                    <Grid item key={item.id} size={{ xs: 12, md: 4, sm: 6 }}>
+                    <Grid key={item.id} size={{ xs: 12, md: 4, sm: 6 }}>
                         <Card sx={{ height: "100%", width: "100%" }}>
                             <CardContent>
                                 <Box sx={{ display: "flex", justifyContent: "center", mb: 1 }}>
